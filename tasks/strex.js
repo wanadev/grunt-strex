@@ -96,12 +96,12 @@ module.exports = function(grunt) {
     let options = this.options({
       match: /(.*)/,
       replace: "$1",
-      separator: "\r\n",
-      fileSeparator: "\r\n",
+      separator: "\n",
+      fileSeparator: "\n",
       ecmaVersion: 6,
       comment: true,
       commentStart: "// ",
-      commentEnd: "\r\n"
+      commentEnd: "\n"
     });
 
     this.files.forEach(checkFilesGroup.bind(undefined, options));

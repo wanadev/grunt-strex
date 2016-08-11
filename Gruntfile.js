@@ -42,7 +42,7 @@ module.exports = function(grunt) {
           match: /^.@type (.*)./,
           replace: "($1)",
           separator: ", ",
-          fileSeparator: "\r\n",
+          fileSeparator: "\n",
           ecmaVersion: 6,
           comment: false
         },
