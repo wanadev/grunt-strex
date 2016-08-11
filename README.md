@@ -1,5 +1,11 @@
 # grunt-strex
 
+[![Build Status](https://travis-ci.org/wanadev/grunt-strex.svg?branch=master)](https://travis-ci.org/wanadev/grunt-strex)
+[![NPM Version](http://img.shields.io/npm/v/grunt-strex.svg?style=flat)](https://www.npmjs.com/package/grunt-strex)
+[![License](http://img.shields.io/npm/l/grunt-strex.svg?style=flat)](https://github.com/wanadev/grunt-strex/blob/master/LICENSE)
+[![Dependencies](https://img.shields.io/david/wanadev/grunt-strex.svg?maxAge=2592000)]()
+[![Dev Dependencies](https://img.shields.io/david/dev/wanadev/grunt-strex.svg?maxAge=2592000)]()
+
 > Grunt plugin to extract strings from javascript files, process them and export them all to an other file.
 
 ## Getting Started

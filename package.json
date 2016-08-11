@@ -14,12 +14,7 @@
   "bugs": {
     "url": "https://github.com/wanadev/grunt-strex/issues"
   },
-  "licenses": [
-    {
-      "type": "BSD-3-Clause",
-      "url": "https://github.com/wanadev/grunt-strex/blob/master/LICENSE"
-    }
-  ],
+  "license": "BSD-3-Clause",
   "scripts": {
     "test": "grunt test"
   },
