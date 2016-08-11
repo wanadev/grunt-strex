@@ -107,13 +107,13 @@ grunt.initConfig({
       comment: false
     },
     files: {
-      'dest/result': ['src/testing'],
+      'dest/result.txt': ['src/testing.js'],
     },
   },
 });
 ```
 
-You extract all strings of the `src/testing.js` file to the resulting `dest/result`:
+You extract all strings of the `src/testing.js` file to the resulting `dest/result.txt`:
 ```
 title: Hello, name: Sexy
 ```
