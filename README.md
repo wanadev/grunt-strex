@@ -3,7 +3,7 @@
 > Grunt plugin to extract strings from javascript files, process them and export them all to an other file.
 
 ## Getting Started
-This plugin requires Grunt `~0.4.5`
+This plugin requires Grunt `~1.0.0`
 
 If you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out the [Getting Started](http://gruntjs.com/getting-started) guide, as it explains how to create a [Gruntfile](http://gruntjs.com/sample-gruntfile) as well as install and use Grunt plugins. Once you're familiar with that process, you may install this plugin with this command:
 
@@ -37,53 +37,83 @@ grunt.initConfig({
 
 ### Options
 
+#### options.match
+Type: `RegExp`
+Default value: `/(.*)/`
+
+A regular expression specifying the strings you want to match.
+
+#### options.replace
+Type: `String`
+Default value: `"$1"`
+
+A string used to replace whatever the matching string was. Follow RegExp guidelines.
+
 #### options.separator
 Type: `String`
-Default value: `',  '`
+Default value: `"\r\n"`
 
-A string value that is used to do something with whatever.
+A string to print between each matching and replaced string.
 
-#### options.punctuation
+#### options.fileSeparator
 Type: `String`
-Default value: `'.'`
+Default value: `"\r\n"`
 
-A string value that is used to do something else with whatever else.
+A string to print between each file string. Please note that files with no strings in it or with syntax error won't appear in the result.
+
+#### options.ecmaVersion
+Type: `Number`
+Default value: `6`
+
+The standard version used for the JS parser.
+
+#### options.comment
+Type: `Boolean`
+Default value: `true`
+
+Whether or not comments with filenames should appear in the result.
+
+#### options.commentStart
+Type: `String`
+Default value: `"// "`
+
+If comments are active, the token to print before the filename.
+
+#### options.commentEnd
+Type: `String`
+Default value: `"\r\n"`
+
+If comments are active, the token to print after the filename.
 
 ### Usage Examples
 
-#### Default Options
-In this example, the default options are used to do something with whatever. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result would be `Testing, 1 2 3.`
-
-```js
-grunt.initConfig({
-  strex: {
-    options: {},
-    files: {
-      'dest/default_options': ['src/testing', 'src/123'],
-    },
-  },
-});
+If you have a file `src/testing.js` with content:
+```js 
+var tags = [
+  "@title Hello",
+  "@name Sexy"
+];
 ```
 
-#### Custom Options
-In this example, custom options are used to do something else with whatever else. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result in this case would be `Testing: 1 2 3 !!!`
-
+Using this options:
 ```js
 grunt.initConfig({
   strex: {
     options: {
-      separator: ': ',
-      punctuation: ' !!!',
+      match: /^.@(.*) (.*)./,
+      replace: "$1: $2",
+      separator: ", ",
+      ecmaVersion: 5,
+      comment: false
     },
     files: {
-      'dest/default_options': ['src/testing', 'src/123'],
+      'dest/result': ['src/testing'],
     },
   },
 });
 ```
 
-## Contributing
-In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
-
-## Release History
-_(Nothing yet)_
+You extract all strings of the `src/testing.js` file to the resulting `dest/result`:
+```
+title: Hello, name: Sexy
+```
