@@ -34,16 +34,20 @@ module.exports = function(grunt) {
         options: {
         },
         files: {
-          'tmp/default_options': ['test/fixtures/testing', 'test/fixtures/123']
+          'tmp/default_options': ['test/fixtures/**/*.js']
         }
       },
       custom_options: {
         options: {
-          separator: ': ',
-          punctuation: ' !!!'
+          match: /^.@type (.*)./,
+          replace: "($1)",
+          separator: ", ",
+          fileSeparator: "\r\n",
+          ecmaVersion: 6,
+          comment: false
         },
         files: {
-          'tmp/custom_options': ['test/fixtures/testing', 'test/fixtures/123']
+          'tmp/custom_options': ['test/fixtures/**/*.js']
         }
       }
     },

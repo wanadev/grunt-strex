@@ -1,13 +1,20 @@
 {
-  "curly": true,
-  "eqeqeq": true,
-  "immed": true,
-  "latedef": true,
-  "newcap": true,
+  "futurehostile": true,
+  "freeze": true,
+  "latedef": false,
   "noarg": true,
-  "sub": true,
+  "nocomma": true,
+  "nonbsp": true,
+  "nonew": true,
   "undef": true,
-  "boss": true,
-  "eqnull": true,
-  "node": true
+  "browser": true,
+  "browserify": true,
+  "mocha": true,
+  "shadow": false,
+  "esnext": true,
+  "loopfunc": true,
+  "newcap": false,
+  "globals": {
+      "console": false
+  }
 }
