@@ -1,7 +1,7 @@
 {
   "name": "grunt-strex",
   "description": "Grunt plugin to extract strings from javascript files, process them and export them all to an other file.",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "homepage": "https://github.com/wanadev/grunt-strex",
   "author": {
     "name": "Wanadev",
