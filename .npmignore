@@ -3,6 +3,7 @@ npm-debug.log
 tmp
 test
 
+.travis.yml
 .jshintrc
 Gruntfile.js
 *.tgz
