@@ -1,5 +1,7 @@
 # grunt-strex
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/wanadev/grunt-strex.svg)](https://greenkeeper.io/)
+
 [![Build Status](https://travis-ci.org/wanadev/grunt-strex.svg?branch=master)](https://travis-ci.org/wanadev/grunt-strex)
 [![NPM Version](http://img.shields.io/npm/v/grunt-strex.svg?style=flat)](https://www.npmjs.com/package/grunt-strex)
 [![License](http://img.shields.io/npm/l/grunt-strex.svg?style=flat)](https://github.com/wanadev/grunt-strex/blob/master/LICENSE)
