@@ -5,6 +5,7 @@
 [![License](http://img.shields.io/npm/l/grunt-strex.svg?style=flat)](https://github.com/wanadev/grunt-strex/blob/master/LICENSE)
 [![Dependencies](https://img.shields.io/david/wanadev/grunt-strex.svg?maxAge=2592000)]()
 [![Dev Dependencies](https://img.shields.io/david/dev/wanadev/grunt-strex.svg?maxAge=2592000)]()
+[![Greenkeeper badge](https://badges.greenkeeper.io/wanadev/grunt-strex.svg)](https://greenkeeper.io/)
 
 > Grunt plugin to extract strings from javascript files, process them and export them all to an other file.
 
