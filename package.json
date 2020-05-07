@@ -25,7 +25,7 @@
     "grunt-contrib-nodeunit": "^1.0.0"
   },
   "dependencies": {
-    "espree": "^3.1.7"
+    "espree": "^7.0.0"
   },
   "keywords": [
     "gruntplugin"
